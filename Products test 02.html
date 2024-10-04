@@ -1,52 +1,40 @@
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lora Online Shopping Store</title>
   <style>
-		/* Your existing CSS styles here */
-
-		h1 {
-			color: #db1d49; /* Set the color of the heading to #db1d49 */
-		}
-	</style>
-  <link rel="icon" href="Lora logo test png.png" type="lora logo white.png">
-  <style>
-    
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Lora Online Shopping Store</title>
-  <style>
+    /* General Styles */
     body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
     }
-    
+
     .cover-section {
       background-image: url("Product cover .jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 300px; /* Adjust the height as needed */
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    
+
     .logo {
       text-align: center;
     }
-    
+
     .website-name {
       color: #db1d49;
       font-size: 24px;
-      font-family: Arial, sans-serif;
       margin-top: 10px;
     }
-    
+
     .navbar {
       background-color: #f2f2f2;
       overflow: hidden;
-      font-family: Arial, sans-serif;
     }
 
     .navbar a {
@@ -65,7 +53,8 @@
     .container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 20px; /* Adjust the gap between products as desired */
+      grid-gap: 20px;
+      padding: 20px;
     }
 
     .product {
@@ -73,34 +62,25 @@
     }
 
     img {
-      max-width: 300px; /* Adjust the width as desired */
-      height: auto; /* Maintain aspect ratio */
+      max-width: 300px;
+      height: auto;
     }
 
     h1 {
-      color: black; /* Change the color to black */
-      font-size: 19px; /* Adjust the font size as desired */
-      font-family: Arial, sans-serif;
-    }
-    h2 {
-      font-family: Arial, sans-serif; /* Set the font family for h2 */
-    }  
-      .order-button {
-      display: inline-block;
-      background-color: #da1d48;
-      color: white;
-      width: 80px; /* Adjust the width as desired */
-      height: 30px; /* Adjust the height as desired */
-      border: none;
-      border-radius: 0;
-      text-align: center;
-      text-decoration: none;
-      font-size: 15px; /* Adjust the font size as desired */
-      line-height: 30px; /* Adjust the line height to center the text vertically */
+      color: black;
+      font-size: 19px;
     }
 
-    .price {
-      font-weight: bold;
+    .order-button {
+      background-color: #da1d48;
+      color: white;
+      width: 80px;
+      height: 30px;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      line-height: 30px;
+      display: inline-block;
     }
 
     .footer {
@@ -109,21 +89,62 @@
       text-align: center;
       padding: 15px;
       font-size: 15px;
-      font-family: Arial, sans-serif; /* Add this line to set the font */
+    }
+
+    /* Media Queries for Tablets */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on tablets */
+      }
+
+      .website-name {
+        font-size: 20px; /* Reduce website name font size */
+      }
+
+      .navbar a {
+        padding: 12px 14px;
+      }
+    }
+
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 480px) {
+      .container {
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+      }
+
+      .website-name {
+        font-size: 18px; /* Even smaller font size for mobile */
+      }
+
+      img {
+        max-width: 100%; /* Ensure images resize to fit mobile screen */
+      }
+
+      .navbar a {
+        float: none;
+        width: 100%; /* Make navbar items stack vertically on mobile */
+      }
+
+      .order-button {
+        width: 100px; /* Adjust button size for mobile */
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Cover Section -->
   <div class="cover-section">
     <div class="logo">
       <a href="website2.html">
         <img src="Lora logo test png.png" alt="Lora Logo" width="200" height="200">
       </a>
       <h1 class="website-name">Lora Online Shopping Store</h1>
-      <h2 class="Products">Products</h2>
+      <h2>Products</h2>
     </div>
   </div>
 
+  <!-- Navbar -->
   <div class="navbar">
     <a href="website2.html">Home</a>
     <a href="Contact Us.html">Contact Us</a>
@@ -131,31 +152,6 @@
     <a href="About Us.html">About Us</a>
   </div>
 
-  <!DOCTYPE html>
-<html>
-<head>
-<style>
-/* Style for the image wrapper */
-.image-wrapper {
-  display: inline-block;
-  position: relative;
-}
-
-/* Style for the enlarged image */
-.enlarge-image {
-  cursor: pointer;
-  transition: transform 0.2s;
-  max-width: 100%;
-}
-
-.image-wrapper:hover .enlarge-image {
-  transform: scale(1.2);
-  z-index: 1;
-  position: relative;
-}
-</style>
-</head>
-<body>
 <div class="container">
   <div class="product">
     <h1>750ml Customize Glass Water Bottles</h1>
@@ -179,7 +175,7 @@
   </div>
   <div class="product">
     <h1>600ml Plastic Water Bottle</h1>
-    <p style="color: Green;">Low Stock</p>
+    <p style="color: red;">Out Of Stock</p>
     <div class="image-wrapper">
       <a href="Plastic bottle 600ml.jpg" target="_blank">
         <img src="Plastic bottle 600ml.jpg" alt="Plastic Water Bottle" class="enlarge-image">
